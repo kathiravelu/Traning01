@@ -1,0 +1,8 @@
+
+name: Greeting welcome message
+  on: 
+   pull_request:
+
+  jobs:
+    steps:
+      - run: echo "🎉 The job was automatically triggered by a use  event."
