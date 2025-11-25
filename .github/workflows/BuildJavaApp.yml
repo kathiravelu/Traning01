@@ -32,7 +32,6 @@ jobs:
         cache: maven
 
     - name: Buid using the composite app
-      uses: ./github/actions/compositeBuild
-      run: mvn --batch-mode deploy
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      uses: ./.github/actions/compositeBuild
+      with:
+        working-directory: java-app
