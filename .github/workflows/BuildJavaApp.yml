@@ -5,13 +5,12 @@
 name: Build a Java Application
 
 on:
+  workflow_dispatch:
   push:
     branches: [ "main" ]
     paths:
       - java-app/**
-  pull_request:
-    branches: [ "main" ]
-
+    
 jobs:
   build:
     runs-on: ubuntu-latest
